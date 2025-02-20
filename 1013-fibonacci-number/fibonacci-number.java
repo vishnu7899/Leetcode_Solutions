@@ -3,7 +3,8 @@ class Solution {
         if (n <= 1) {
             return n;
         }
-        int first_digit=0;
+        return (fib(n-1)+fib(n-2));
+        /*int first_digit=0;
         int second_digit=1;
         int next_digit=0;
 
@@ -15,6 +16,6 @@ class Solution {
          second_digit=next_digit;    
         
         }
-        return next_digit;
+        return next_digit;*/
     }
 }
