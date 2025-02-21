@@ -1,20 +1,20 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        for(int i=0;i<nums.length;i++)
+        int res=0;
+       for(int num:nums)
        {
-            int count=0;
-            for(int j=0;j<nums.length;j++)
-            {
-                if(nums[i]==nums[j])
-                {
-                    count++;
-                }
-            }
-            if(count==1)
-            {
-                return nums[i];
-            }
+            res^=num;  //Bit manipulation  
        }
-       return -1;
+       /*res = 0 ^ 2 -> res = 2
+
+        res = 2 ^ 3 -> res = 1
+
+        res = 1 ^ 2 -> res = 3
+
+        res = 3 ^ 4 -> res = 7
+
+        res = 7 ^ 3 -> res = 4 */
+
+       return res;
     }
 }
